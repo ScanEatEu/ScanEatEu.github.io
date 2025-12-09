@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Don Eugenio - Sistema de Pedidos</title>
+    <link rel="stylesheet" href="tm.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <header class="menu-bar">
+        <h1>Don Eugenio - 🔪 La Mejor Comida Rápida</h1>
+        <nav>
+            <ul>
+                <li><a href="#productos">Menú</a></li>
+                <li><a href="#qr">Paga Rápido (QR)</a></li>
+                <li><a href="#carrito">Tu Pedido</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        
+        <section id="productos" class="product-list">
+            <h2>Menú: Churrascos y Lomitos 🥖</h2>
+            
+                        <div class="product-item" data-product="churrasco_italiano">
+                <h3>Churrasco Italiano</h3>
+                <p>Carne, tomate, palta y mayonesa.</p>
+                <p class="price">$2.800</p>
+                <button class="add-to-cart" data-name="Churrasco Italiano" data-price="2800" data-key="churrasco_italiano">Añadir al Pedido</button>
+            </div>
+
+                        <div class="product-item" data-product="churrasco_completo">
+                <h3>Churrasco Completo</h3>
+                <p>Carne, tomate, chucrut, salsa americana y mayonesa.</p>
+                <p class="price">$2.900</p>
+                <button class="add-to-cart" data-name="Churrasco Completo" data-price="2900" data-key="churrasco_completo">Añadir al Pedido</button>
+            </div>
+
+                        <div class="product-item" data-product="churrasco_palta">
+                <h3>Churrasco Palta</h3>
+                <p>Carne y Palta.</p>
+                <p class="price">$2.500</p>
+                <button class="add-to-cart" data-name="Churrasco Palta" data-price="2500" data-key="churrasco_palta">Añadir al Pedido</button>
+            </div>
+
+                        <div class="product-item" data-product="lomito_queso">
+                <h3>Lomito Queso</h3>
+                <p>Lomo de cerdo y Queso fundido.</p>
+                <p class="price">$2.400</p>
+                <button class="add-to-cart" data-name="Lomito Queso" data-price="2400" data-key="lomito_queso">Añadir al Pedido</button>
+            </div>
+        </section>
+
+        ---
+
+		<section id="qr" class="qr-code-section">
+			<h2>Paga con Código QR 📱</h2>
+			<p>Escanea para pagar con tu aplicación favorita (ej. Banco/Wallet).</p>
+						<div class="qr-image-container">
+								<img id="qr-img" src="" alt="Código QR de Pago" class="qr-code-image" style="display:none; width:300px; height:300px;">
+				<p class="qr-note">Selecciona 'Transferencia / QR' como método de pago para ver el QR.</p>
+			</div>
+		</section>
+        
+        ---
+
+        <section id="carrito" class="order-summary">
+            <h2>Tu Pedido y Ticket 🧾</h2>
+
+            <div class="ticket-container">
+                <h3>Ticket de Compra</h3>
+                <ul id="order-list" class="ticket-list">
+                    <li>No hay productos en el pedido.</li>
+                </ul>
+                <div class="total-section">
+                    <strong>Total:</strong>
+                    <span id="total-price">$0</span>
+                </div>
+                <hr>
+                
+                <div id="pago" class="payment-methods">
+                    <h3>Método de Pago Seleccionado</h3>
+                    <select id="payment-method">
+                        <option value="efectivo">Efectivo</option>
+                        <option value="tarjeta">Tarjeta de Crédito/Débito</option>
+                        <option value="transferencia">Transferencia / QR</option>
+                    </select>
+                </div>
+                
+                <button id="checkout-button">Pagar y Generar Ticket</button>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="scrip.js"></script>
+</body>
+</html>
